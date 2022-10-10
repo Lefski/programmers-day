@@ -8,7 +8,7 @@ public class Main{
         int year = scanner.nextInt();
 
         if (isLeapYear(year)) {
-            System.out.println("12.09." + year);
+             System.out.println("12.09." + year);
         } else {
             System.out.println("13.09." + year);
         }
@@ -19,6 +19,10 @@ public class Main{
             return true;
         } else if (year % 100 == 0){
             return false;
-        } else return year % 4 == 0;
+        } else if (year % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
